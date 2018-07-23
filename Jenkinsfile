@@ -37,6 +37,7 @@ pipeline {
 		stage('commit build assets to git') {
 			steps {
 				dir('/home/saguser/workspace/SoftwareAGBuildAssets'){
+					sh 'git init'
 					sh 'git add .'
 					sh 'git config --global user.name "AbhishekGupta1506"'
 					sh 'git config --global user.email abhishekgupta1506@gmail.com'
