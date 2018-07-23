@@ -1,5 +1,5 @@
 pipeline {
-	agent {docker-swarm}
+	agent {label 'docker-swarm'}
 	environment{
 		BRANCH_NAME = "master"
 	}
