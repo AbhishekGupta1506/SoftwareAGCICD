@@ -24,7 +24,7 @@ pipeline {
 		}
 		stage('checkout build Assets') {
 			steps {
-				sh 'git clone https://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git'
+				sh 'git clone http://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git'
 			}
 		}
 		stage('Build Assets using ABE') {
@@ -42,7 +42,7 @@ pipeline {
 					sh 'git config --global user.name "AbhishekGupta1506"'
 					sh 'git config --global user.email abhishekgupta1506@gmail.com'
 					sh 'git commit -am "pushing assets build"'
-					sh 'git push https://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
+					sh 'git push http://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
 				}
 			}
 		}
