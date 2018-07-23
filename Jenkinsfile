@@ -30,7 +30,7 @@ pipeline {
 		stage('Build Assets using ABE') {
 			steps {
 				dir('/home/saguser/SoftwareAG103/common/AssetBuildEnvironment/bin/'){
-					sh 'build.sh'
+					sh './build.sh'
 				}
 			}
 		}
