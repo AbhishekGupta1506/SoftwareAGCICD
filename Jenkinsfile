@@ -1,5 +1,5 @@
 pipeline {
-	agent master
+	agent {master}
 	environment{
 		BRANCH_NAME = "master"
 	}
