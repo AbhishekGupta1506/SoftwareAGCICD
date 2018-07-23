@@ -34,5 +34,14 @@ pipeline {
 				}
 			}
 		}
+		stage('commit build assets to git') {
+			steps {
+				dir('/home/saguser/workspace/SoftwareAGBuildAssets'){
+					sh 'git add .'
+					sh 'git commit -am "pushing assets build"'
+					sh 'git push https://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
+				}
+			}
+		}
 	}
 }
