@@ -2,9 +2,11 @@ pipeline {
 	agent any
 	stages {
 		stage('cleanup') {
-			dir('/home/saguser/workspace/SoftwareAGAssets'){
-				sh 'rm -rf /home/saguser/workspace/SoftwareAGAssets'
-			}
+			steps {
+					dir('/home/saguser/workspace/SoftwareAGAssets'){
+						sh 'rm -rf /home/saguser/workspace/SoftwareAGAssets'
+					}
+				}
 		}
 		stage('checkout') {
 			steps {
