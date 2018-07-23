@@ -6,11 +6,9 @@ pipeline {
 	stages {
 		stage('cleanup') {
 		steps {
-			if (env.BRANCH_NAME == 'master') {
-				echo 'I only execute on the master branch'
-			} else {
-				echo 'I execute elsewhere'
-			}
+				dir('/home/saguser/workspace'){
+					sh 'rm -rf *'
+				}
 			}
 		}
 		stage('checkout') {
