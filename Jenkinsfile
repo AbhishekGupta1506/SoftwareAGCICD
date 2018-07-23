@@ -42,7 +42,7 @@ pipeline {
 					sh 'git config --global user.name "AbhishekGupta1506"'
 					sh 'git config --global user.email abhishekgupta1506@gmail.com'
 					sh 'git commit -am "pushing assets build"'
-					sh 'git push https://AbhishekGupta1506:Passw0rd@2801$@github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
+					sh 'git push https://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
 				}
 			}
 		}
