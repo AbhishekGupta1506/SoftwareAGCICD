@@ -3,7 +3,7 @@ agent any
 stages {
 	stage ('checkout'){
 		steps {
-			git clone https://github.com/AbhishekGupta1506/SoftwareAGAssets.git
+			'git clone http://github.com/AbhishekGupta1506/SoftwareAGAssets.git'
 		}
 	}
 }
