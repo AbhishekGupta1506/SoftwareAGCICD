@@ -11,7 +11,7 @@ pipeline {
 	stages {
 		stage('cleanup') {
 		steps {
-				dir('/home/saguser/workspace'){
+				dir('/home/saguser/workspace/SoftwareAGAssets'){
 					sh 'rm -rf *'
 				}
 			}
