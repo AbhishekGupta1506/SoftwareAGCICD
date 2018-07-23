@@ -1,5 +1,10 @@
 pipeline {
-	agent {label 'docker-swarm'}
+	agent {
+			node {
+				label 'docker-swarm'
+				customWorkspace '/home/saguser/workspace'
+			}
+		}
 	environment{
 		BRANCH_NAME = "master"
 	}
