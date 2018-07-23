@@ -1,12 +1,15 @@
 pipeline {
 	agent any
+	environment{
+		BRANCH_NAME = "master"
+	}
 	stages {
 		stage('cleanup') {
-			steps {
-					dir('/home/saguser/workspace/SoftwareAGAssets'){
-						sh 'rm -rf /home/saguser/workspace/SoftwareAGAssets'
-					}
-				}
+			if (env.BRANCH_NAME == 'master') {
+				echo 'I only execute on the master branch'
+			} else {
+				echo 'I execute elsewhere'
+			}
 		}
 		stage('checkout') {
 			steps {
