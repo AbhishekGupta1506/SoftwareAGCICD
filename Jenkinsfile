@@ -27,5 +27,12 @@ pipeline {
 				sh 'git clone https://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git'
 			}
 		}
+		stage('Build Assets using ABE') {
+			steps {
+				dir('/home/saguser/SoftwareAG103/common/AssetBuildEnvironment/bin/'){
+					sh 'build.sh'
+				}
+			}
+		}
 	}
 }
