@@ -38,6 +38,8 @@ pipeline {
 			steps {
 				dir('/home/saguser/workspace/SoftwareAGBuildAssets'){
 					sh 'git add .'
+					sh 'git config --global user.name "AbhishekGupta1506"'
+					sh 'git config --global user.email abhishekgupta1506@gmail.com'
 					sh 'git commit -am "pushing assets build"'
 					sh 'git push https://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
 				}
