@@ -19,6 +19,8 @@ pipeline {
 		}
 		stage('checkout source Assets') {
 			steps {
+				sh 'git config --global user.name "AbhishekGupta1506"'
+				sh 'git config --global user.email abhishekgupta1506@gmail.com'
 				sh 'git clone git@github.com:AbhishekGupta1506/SoftwareAGAssets.git'
 			}
 		}
