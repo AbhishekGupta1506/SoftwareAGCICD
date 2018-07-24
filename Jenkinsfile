@@ -56,10 +56,10 @@ pipeline {
 				}
 			}
 		}
-		stage ('Deploy assets to target TN runtime') {
+		stage ('Deploy assets to target IS runtime') {
 			steps{
 				dir('/home/saguser/SoftwareAG103/CommandCentral/client/bin'){
-					sh './sagcc exec provisioning assets vmsiqa-abg03 GitRepo install runtimeComponentId=OSGI-IS_default-WmTN artifacts=TN:TNAssets -p manage'
+					sh './sagcc exec provisioning assets vmsiqa-abg03 GitRepo install runtimeComponentId=integrationServer-default artifacts=IS:ScOrderToCash -p manage'
 				}
 			}
 		}
