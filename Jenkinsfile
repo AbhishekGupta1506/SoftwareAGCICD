@@ -19,7 +19,7 @@ pipeline {
 		}
 		stage('checkout source Assets') {
 			steps {
-				sh 'git clone https://github.com/AbhishekGupta1506/SoftwareAGAssets.git'
+				sh 'git clone git@github.com:AbhishekGupta1506/SoftwareAGAssets.git'
 			}
 		}
 		stage('checkout build Assets') {
