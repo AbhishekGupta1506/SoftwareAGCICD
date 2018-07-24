@@ -19,14 +19,12 @@ pipeline {
 		}
 		stage('checkout source Assets') {
 			steps {
-				sh 'git config --global user.name "AbhishekGupta1506"'
-				sh 'git config --global user.email abhishekgupta1506@gmail.com'
-				sh 'git clone git@github.com:AbhishekGupta1506/SoftwareAGAssets.git'
+				sh 'https://github.com/AbhishekGupta1506/SoftwareAGAssets.git'
 			}
 		}
 		stage('checkout build Assets') {
 			steps {
-				sh 'git clone git@github.com:AbhishekGupta1506/SoftwareAGBuildAssets.git'
+				sh 'https://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git'
 			}
 		}
 		stage('Build Assets using ABE') {
