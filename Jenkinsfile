@@ -34,13 +34,16 @@ pipeline {
 				}
 			}
 		}
-		stage('commit build assets to git') {
-			steps {
-				dir('/home/saguser/workspace'){
-					sh 'chmod 777 pushAsset.sh'
-					sh 'sh ./pushAsset.sh'
-				}
-			}
-		}
+		stage ('commit build assets to git') {
+            steps{
+                sshagent(credentials : ['AbhishekJenkinsGIT']) {
+                sh 'git init'
+                sh 'git add .'
+                sh 'git commit -am "pushing assets build automatically "'
+				sh 'git push git+ssh://git@github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
+                }
+            }
+
+        }
 	}
 }
