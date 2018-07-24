@@ -19,12 +19,12 @@ pipeline {
 		}
 		stage('checkout source Assets') {
 			steps {
-				sh 'https://github.com/AbhishekGupta1506/SoftwareAGAssets.git'
+				sh 'git clone https://github.com/AbhishekGupta1506/SoftwareAGAssets.git'
 			}
 		}
 		stage('checkout build Assets') {
 			steps {
-				sh 'https://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git'
+				sh 'git clone https://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git'
 			}
 		}
 		stage('Build Assets using ABE') {
