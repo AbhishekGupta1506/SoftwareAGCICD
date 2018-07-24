@@ -7,6 +7,7 @@ pipeline {
 		}
 	environment{
 		BRANCH_NAME = "master"
+        REPOName="assets-${env.BUILD_NUMBER}"
 	}
 	stages {
 		stage('cleanup') {
@@ -47,5 +48,10 @@ pipeline {
             }
 
         }
+		stage ('Add GIT repo to CCE') {
+			dir('/home/saguser/SoftwareAG103/CommandCentral/client/bin'){
+				sh './sagcc add repository assets git name=GitRepo location=https://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git credentials=NONE description=GitRepo -p manage'
+			}
+		}
 	}
 }
