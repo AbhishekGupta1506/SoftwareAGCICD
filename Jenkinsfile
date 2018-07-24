@@ -39,8 +39,6 @@ pipeline {
 				dir('/home/saguser/workspace/SoftwareAGBuildAssets'){
 					sh 'git init'
 					sh 'git add .'
-					sh 'git config --global user.name "AbhishekGupta1506"'
-					sh 'git config --global user.email abhishekgupta1506@gmail.com'
 					sh 'git commit -am "pushing assets build automatically"'
 					sh 'git push https://AbhishekGupta1506:Siqa28011506@github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
 				}
