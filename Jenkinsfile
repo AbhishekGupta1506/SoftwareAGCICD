@@ -38,7 +38,7 @@ pipeline {
 			steps {
 				dir('/home/saguser/workspace'){
 					sh 'chmod 777 pushAsset.sh'
-					sh './pushAsset.sh'
+					sh 'sh ./pushAsset.sh'
 				}
 			}
 		}

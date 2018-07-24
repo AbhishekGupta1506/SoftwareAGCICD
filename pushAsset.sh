@@ -2,7 +2,8 @@
 
 echo "pushing assets using script"
 
-cd ~/SoftwareAGBuildAssets
+cd ~/workspace/SoftwareAGBuildAssets
+echo "curent directory is : ${PWD}"
 
 git init
 git add .
