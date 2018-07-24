@@ -40,7 +40,8 @@ pipeline {
 					sh 'git init'
 					sh 'git add .'
 					sh 'git commit -am "pushing assets build automatically "'
-					sh 'git push https://AbhishekGupta1506:Siqa28011506@github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
+					sh 'git push git+ssh://git@github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
+					//sh 'git push https://AbhishekGupta1506:Siqa28011506@github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
 				}
 			}
 		}
