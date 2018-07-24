@@ -37,10 +37,12 @@ pipeline {
 		stage ('commit build assets to git') {
             steps{
                 sshagent(credentials : ['AbhishekGupta1506GITVMMOSY07']) {
-                sh 'git init'
-                sh 'git add .'
-                sh 'git commit -am "pushing assets build automatically "'
-				sh 'git push git+ssh://git@github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
+				dir('/home/saguser/workspace'){
+					sh 'git init'
+					sh 'git add .'
+					sh 'git commit -am "pushing assets build automatically "'
+					sh 'git push git+ssh://git@github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git --all | true'
+					}
                 }
             }
 
