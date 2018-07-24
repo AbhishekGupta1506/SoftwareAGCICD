@@ -52,6 +52,7 @@ pipeline {
 			steps{
 				dir('/home/saguser/SoftwareAG103/CommandCentral/client/bin'){
 					sh './sagcc add repository assets git name=GitRepo location=https://github.com/AbhishekGupta1506/SoftwareAGBuildAssets.git credentials=NONE overwrite=true description=GitRepo -p manage'
+					sh 'sleep 300'
 				}
 			}
 		}
